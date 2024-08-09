@@ -1,3 +1,12 @@
+:root {
+    --cor-background: #1d1c1c;
+    --branco-letra: #ffffff;
+}
+
+body {
+    background-color: var(--cor-background)
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +23,7 @@
 }
 
 .features {
-    color: white;
+    color: var(--branco-letra);
     font-size: 18px;
     float: right;
     margin: 30px;
@@ -30,8 +39,28 @@
     font-size: 18px;
 }
 
+.title {
+    padding: 15px;
+    color: var(--branco-letra);
+}
+
     /* Tirar características feias dos links do header */
 a {
     color: unset;
     text-decoration: inherit;
+}
+
+.servicos-oferecidos {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    padding-bottom: 60px;
+}
+
+.teste-servicos {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background: white;
+    margin: 15px;
 }
