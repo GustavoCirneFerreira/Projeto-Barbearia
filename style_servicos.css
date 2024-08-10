@@ -1,10 +1,12 @@
 :root {
-    --cor-background: #1d1c1c;
-    --branco-letra: #ffffff;
+    --white: #fff;
+    --nav_color: #0e1d33;
+    --animatiom_nav_color: #0a3b74;
+    --cor_de_fundo: #1d1c1c;
 }
 
 body {
-    background-color: var(--cor-background)
+    background-color: var(--cor_de_fundo)
 }
 
 * {
@@ -15,52 +17,167 @@ body {
 
 /* HEADER */
 
-.cabecalho {
-    background-color: blueviolet;
+
+body{
+    background-color: var(--cor_de_fundo);
+}
+nav {
+    display: flex;
+    background-color: var(--nav_color);
+    height: 100px;
+}
+
+.titulo {
+    color: var(--white);
+    margin-left: 80px;
+    margin-top: 36px;
+    font-size: 25px
+}
+
+.logo{
+    margin-top: 10px;
+    width: 70px;
+    margin-left: 100px;
+    height: 80px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--nav_color);
+    margin-left: 600px;
+}
+
+.menu_list {
+    margin-right: 40px;
+}
+
+.menu_link {
+    color: var(--white);
+    font-size: 20px;
+}
+
+.menu_link:after {
+    content: '';
+    width: 0;
+    background-color: var(--animatiom_nav_color);
+    display: block;
+    height: 3px;
+    transition: width 0.3s ease;
+}
+
+.menu_link:hover::after {
     width: 100%;
-    height: 75px;
-    overflow: hidden;
 }
 
-.features {
-    color: var(--branco-letra);
-    font-size: 18px;
-    float: right;
-    margin: 30px;
-    text-transform: uppercase;
-}
-
-.features-item {
-    display: inline;
-    padding-right: 15px;
-}
-
-.botao-login {
-    font-size: 18px;
-}
+.button {
+    min-width: 30px;
+    min-height: 40px;
+    display: inline-flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 1.3px;
+    font-weight: 550;
+    background: var(--animatiom_nav_color);
+    border: none;
+    border-radius: 500px;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+  
+  .button::before {
+    content: '';
+    border-radius: 500px;
+    box-shadow: 0 0 60px var(--animatiom_nav_color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .button:hover, 
+  .button:focus {
+    transform: translateY(-6px);
+  }
+  
+/* SERVIÇOS E PRODUTOS */
 
 .title {
-    padding: 15px;
-    color: var(--branco-letra);
+    padding: 10px;
+    padding-top: 50px;
+    color: var(--white);
 }
 
-    /* Tirar características feias dos links do header */
-a {
-    color: unset;
-    text-decoration: inherit;
-}
+
 
 .servicos-oferecidos {
     display: flex;
-    justify-content: center;
-    padding: 30px;
-    padding-bottom: 60px;
+    flex-wrap: wrap; /* Faz com que as imagens se reorganizem em várias linhas se necessário */
+    justify-content: center; /* Distribui as imagens com espaço entre elas */
+    gap: 10px; /* Espaço entre as imagens */
+    padding: 10px;
 }
 
 .teste-servicos {
-    display: inline-block;
-    height: 200px;
-    width: 200px;
-    background: white;
-    margin: 15px;
+    padding-top: 30px;
+    flex: 0 1 calc(19% - 10px); /* Cada imagem ocupa 25% da largura, menos o espaço de gap */
+    box-sizing: border-box;
+    margin: 2px;
+}
+
+.teste-servicos img {
+    width: 100%; /* A imagem ocupa toda a largura do bloco */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço branco abaixo da imagem */
+    border-radius: 10px; /* Arredonda os cantos da imagem (opcional) */
+    transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.teste-servicos img:hover {
+    transform: scale(1.05);
+}
+
+.produtos {
+    padding-top: 30px;
+    flex: 0 1 calc(19% - 3px); /* Cada imagem ocupa 25% da largura, menos o espaço de gap */
+    box-sizing: border-box;
+    margin: 2px;
+}
+
+.produtos img {
+    width: 97%; /* A imagem ocupa toda a largura do bloco */
+    height: 52%; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço branco abaixo da imagem */
+    border-radius: 10px; /* Arredonda os cantos da imagem (opcional) */
+    transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.produtos img:hover {
+    transform: scale(1.01);
+}
+
+.produto-descricao {
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+}
+
+footer {
+    margin: 50px;
 }
