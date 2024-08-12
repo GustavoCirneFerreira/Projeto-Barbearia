@@ -120,7 +120,8 @@ a {
 
 .title {
     padding: 10px;
-    padding-top: 50px;
+    padding-top: 60px;
+    padding-left: 30px;
     color: var(--white);
 }
 
@@ -130,21 +131,19 @@ a {
     display: flex;
     flex-wrap: wrap; /* Faz com que as imagens se reorganizem em várias linhas se necessário */
     justify-content: center; /* Distribui as imagens com espaço entre elas */
-    gap: 10px; /* Espaço entre as imagens */
-    padding: 10px;
+    gap: 17px; /* Espaço entre as imagens */
 }
 
 .teste-servicos {
     padding-top: 30px;
     flex: 0 1 calc(19% - 10px); /* Cada imagem ocupa 25% da largura, menos o espaço de gap */
     box-sizing: border-box;
-    margin: 2px;
 }
 
 .teste-servicos img {
     width: 100%; /* A imagem ocupa toda a largura do bloco */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove espaço branco abaixo da imagem */
+    height: 100%; /* Mantém a proporção da imagem */
+    display: inline-block; /* Remove espaço branco abaixo da imagem */
     border-radius: 10px; /* Arredonda os cantos da imagem (opcional) */
     transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
 }
@@ -158,12 +157,13 @@ a {
     flex: 0 1 calc(19% - 3px); /* Cada imagem ocupa 25% da largura, menos o espaço de gap */
     box-sizing: border-box;
     margin: 2px;
+    text-align: center;
 }
 
 .produtos img {
-    width: 97%; /* A imagem ocupa toda a largura do bloco */
+    width: 77%; /* A imagem ocupa toda a largura do bloco */
     height: 52%; /* Mantém a proporção da imagem */
-    display: block; /* Remove espaço branco abaixo da imagem */
+    display: inline-block; /* Remove espaço branco abaixo da imagem */
     border-radius: 10px; /* Arredonda os cantos da imagem (opcional) */
     transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
 }
@@ -173,8 +173,6 @@ a {
 }
 
 .produto-descricao {
-    display: flex;
-    justify-content: center;
     color: var(--white);
 }
 
