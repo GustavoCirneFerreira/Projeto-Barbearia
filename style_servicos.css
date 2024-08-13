@@ -3,6 +3,8 @@
     --nav_color: #0e1d33;
     --animatiom_nav_color: #0a3b74;
     --cor_de_fundo: #1d1c1c;
+    --cor_do_rodape: #292828;
+
 }
 
 body {
@@ -134,6 +136,11 @@ a {
     gap: 17px; /* Espaço entre as imagens */
 }
 
+.servico-prod {
+    padding-bottom: 10rem;
+}
+
+
 .teste-servicos {
     padding-top: 30px;
     flex: 0 1 calc(19% - 10px); /* Cada imagem ocupa 25% da largura, menos o espaço de gap */
@@ -176,6 +183,93 @@ a {
     color: var(--white);
 }
 
+/* FOOTER */
+
 footer {
-    margin: 50px;
+    width: 100%;
+    color: var(--white);
+}
+
+.footer-link {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#footer_content {
+    background-color: var(--cor_do_rodape);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts {
+    margin-left: 30%;
+}
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--white);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+    background-color: var(--animatiom_nav_color);
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: var(--white);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: var(--animatiom_nav_color);
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor_do_rodape);
+    font-size: 1rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        padding: 3rem 2rem;
+    }
 }
